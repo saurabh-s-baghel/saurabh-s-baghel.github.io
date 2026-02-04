@@ -15,8 +15,8 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center bg-[#0B0B0E] relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-red-600/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute w-96 h-96 bg-red-600/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+        <div className="absolute w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 relative z-10">
@@ -33,10 +33,10 @@ const Hero = () => {
 
           {/* Role & University */}
           <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-300">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-zinc-300">
               {personalInfo.role}
             </h2>
-            <p className="text-xl md:text-2xl text-gray-400">
+            <p className="text-xl md:text-2xl text-zinc-500">
               {personalInfo.university}
             </p>
           </div>

@@ -21,16 +21,16 @@ const Projects = () => {
     : projects.filter((project) => project.category === filter);
 
   return (
-    <section id="projects" className="py-20 bg-zinc-950">
+    <section id="projects" className="py-20 bg-gradient-to-b from-black via-zinc-950 to-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            My <span className="text-red-500">Projects</span>
+            My <span className="bg-gradient-to-r from-yellow-400 to-red-400 bg-clip-text text-transparent">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Here are some of my recent projects showcasing my skills in software development, Android, cybersecurity, and machine learning.
+            Here are some of my recent projects showcasing my skills in Software development, Android, Cybersecurity, and Machine learning.
           </p>
         </div>
 
@@ -43,8 +43,8 @@ const Projects = () => {
               variant={filter === category.id ? 'default' : 'outline'}
               className={`${
                 filter === category.id
-                  ? 'bg-red-600 hover:bg-red-700 text-white'
-                  : 'border-zinc-700 text-gray-400 hover:border-red-600 hover:text-red-500'
+                  ? 'bg-gradient-to-r from-red-400 to to-amber-400 hover:from-red-700 hover:to-amber-400 text-white shadow-md shadow-red-600/30'
+                  : 'border-zinc-900 text-gray-200 hover:border-amber-500 hover:text-amber-700 shadow-red-600/30'
               }`}
             >
               {category.name}
@@ -57,7 +57,7 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
-              className="bg-zinc-900 border-zinc-800 hover:border-red-900/50 transition-all duration-300 hover:transform hover:-translate-y-2 overflow-hidden group"
+              className="bg-gradient-to-b from-zinc-900 to-zinc-950 border border-zinc-800 hover:border-red-600/50 hover:shadow-lg hover:shadow-red-900/20 transition-all duration-300 hover:-translate-y-2 overflow-hidden group"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden bg-zinc-800">
@@ -70,7 +70,7 @@ const Projects = () => {
               </div>
 
               <CardHeader>
-                <h3 className="text-xl font-bold text-white group-hover:text-red-500 transition-colors">
+                <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
                   {project.title}
                 </h3>
               </CardHeader>
@@ -86,7 +86,7 @@ const Projects = () => {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="bg-zinc-800 text-gray-300 text-xs"
+                      className="bg-zinc-800/70 text-gray-400 text-xs"
                     >
                       {tech}
                     </Badge>
@@ -106,7 +106,7 @@ const Projects = () => {
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-red-600 hover:bg-red-700 text-white"
+                  className="flex-1 bg-red-600 hover:border-amber-400 hover:text-amber-400 text-white"
                   onClick={() => window.open(project.liveUrl, '_blank')}
                 >
                   <ExternalLink size={16} className="mr-2" />
@@ -120,7 +120,7 @@ const Projects = () => {
         {/* No projects message */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">No projects found in this category.</p>
+            <p className="text-white-400 text-lg">No projects found in this category.</p>
           </div>
         )}
       </div>

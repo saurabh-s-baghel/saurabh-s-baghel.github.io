@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#0B0B0E]/80 backdrop-blur-xl border-b border-yellow-400/20 shadow-lg shadow-black/50': 'bg-transparent'
+      isScrolled ? 'bg-[#0B0B0E]/80 backdrop-transparent-xl border-b border-yellow-400/20 shadow-lg shadow-black/80': 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -89,7 +89,7 @@ const Navbar = () => {
             ))}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="w-full bg-red-600 hover:bg-red-700 text-white"
+              className="w-full bg-gradient-to-r from-red-600 to-yellow-400 hover:from-red-700 hover:to-yellow-400 text-white"
             >
               Get in Touch
             </Button>
