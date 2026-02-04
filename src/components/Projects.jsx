@@ -10,10 +10,10 @@ const Projects = () => {
 
   const categories = [
     { id: 'all', name: 'All Projects' },
+    { id: 'web', name: 'Web' },
     { id: 'android', name: 'Android' },
-    { id: 'cybersecurity', name: 'Cybersecurity' },
-    { id: 'machine-learning', name: 'ML/RL' },
-    { id: 'web', name: 'Web' }
+    { id: 'systems', name: 'Systems' },
+    { id: 'testing', name: 'Testing & QA' }
   ];
 
   const filteredProjects = filter === 'all'
@@ -69,10 +69,16 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-60"></div>
               </div>
 
-              <CardHeader>
+              <CardHeader className="space-y-2">
                 <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
                   {project.title}
                 </h3>
+
+                {project.restricted && (
+                  <Badge className="w-fit bg-zinc-800 text-amber-400 text-xs border border-amber-400/30">
+                    Academic Project
+                  </Badge>
+                )}
               </CardHeader>
 
               <CardContent className="space-y-4">
@@ -95,23 +101,28 @@ const Projects = () => {
               </CardContent>
 
               <CardFooter className="flex gap-3">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 border-zinc-700 text-gray-400 hover:border-red-600 hover:text-red-500 hover:bg-transparent"
-                  onClick={() => window.open(project.githubUrl, '_blank')}
-                >
-                  <Github size={16} className="mr-2" />
-                  Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-red-600 hover:border-amber-400 hover:text-amber-400 text-white"
-                  onClick={() => window.open(project.liveUrl, '_blank')}
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  Demo
-                </Button>
+                {project.githubUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 border-zinc-700 text-gray-400 hover:border-red-600 hover:text-red-500 hover:bg-transparent"
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                  >
+                    <Github size={16} className="mr-2" />
+                    Code
+                  </Button>
+                )}
+
+                {project.liveUrl && (
+                  <Button
+                    size="sm"
+                    className="flex-1 bg-red-600 hover:text-amber-400 text-white"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                  >
+                    <ExternalLink size={16} className="mr-2" />
+                    Live
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
