@@ -14,14 +14,14 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-black to-zinc-950">
+    <section id="about" className="py-20 bg-gradient-to-b from-[#0B0B0E] via-zinc-950 to-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About <span className="text-red-500">Me</span>
+            About <span className="bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-red-500 mx-auto"></div>
+          <div className="w-40 h-0.5 bg-red-500 mx-auto"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -41,10 +41,10 @@ const About = () => {
                 {aboutMe.interests.map((interest) => {
                   const Icon = interestIcons[interest] || Code2;
                   return (
-                    <Card key={interest} className="bg-zinc-900 border-zinc-800 hover:border-red-900/50 transition-colors">
+                    <Card key={interest} className="bg-zinc-900/80 border-zinc-800 hover:border-yellow-400/40 hover:-translate-y-1 transition-all duration-300">
                       <CardContent className="p-4 flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-red-600/10 rounded-lg flex items-center justify-center">
-                          <Icon className="text-red-500" size={20} />
+                        <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center">
+                          <Icon className="text-yellow-400" size={20} />
                         </div>
                         <span className="text-gray-300 font-medium">{interest}</span>
                       </CardContent>
@@ -71,7 +71,7 @@ const About = () => {
                           <Badge
                             key={skill.name}
                             variant="secondary"
-                            className="bg-zinc-800 text-gray-300 hover:bg-red-600 hover:text-white transition-colors px-4 py-2"
+                            className="bg-zinc-800 text-gray-300 hover:bg-yellow-400 hover:text-black transition-colors px-4 py-2"
                           >
                             {skill.name}
                           </Badge>
@@ -89,7 +89,7 @@ const About = () => {
                           <Badge
                             key={skill.name}
                             variant="secondary"
-                            className="bg-zinc-800 text-gray-300 hover:bg-red-600 hover:text-white transition-colors px-4 py-2"
+                            className="bg-zinc-800 text-gray-300 hover:bg-yellow-400 hover:text-black transition-colors px-4 py-2"
                           >
                             {skill.name}
                           </Badge>
@@ -107,7 +107,7 @@ const About = () => {
                           <Badge
                             key={skill.name}
                             variant="secondary"
-                            className="bg-zinc-800 text-gray-300 hover:bg-red-600 hover:text-white transition-colors px-4 py-2"
+                            className="bg-zinc-800 text-gray-300 hover:bg-yellow-400 hover:text-black transition-colors px-4 py-2"
                           >
                             {skill.name}
                           </Badge>

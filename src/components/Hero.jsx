@@ -12,22 +12,22 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-[#0B0B0E] relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-red-900/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-red-800/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute w-96 h-96 bg-red-600/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+        <div className="absolute w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center space-y-8">
           {/* Greeting */}
           <div className="inline-block">
-            <p className="text-red-500 font-semibold text-lg mb-2">Hello, I'm</p>
+            <p className="text-yellow-400 font-semibold text-lg mb-2 tracking-wide uppercase">Hello, I'm</p>
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-100 tracking-tight">
             {personalInfo.name}
           </h1>
 
@@ -50,7 +50,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg group"
+              className="bg-gradient-to-r from-red-600 to-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg shadow-red-600/30 text-white px-8 py-6 text-lg group"
             >
               View My Work
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
@@ -58,7 +58,7 @@ const Hero = () => {
             <Button
               onClick={() => scrollToSection('contact')}
               variant="outline"
-              className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-8 py-6 text-lg"
+              className="border-yellow-400 text-yellow-400 hover:bg-yellow-500 hover:text-black px-8 py-6 text-lg"
             >
               Contact Me
             </Button>
@@ -70,7 +70,7 @@ const Hero = () => {
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-red-500 transition-colors"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
               aria-label="GitHub"
             >
               <Github size={24} />
@@ -79,14 +79,14 @@ const Hero = () => {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-red-500 transition-colors"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="text-gray-400 hover:text-red-500 transition-colors"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
               aria-label="Email"
             >
               <Mail size={24} />
@@ -95,7 +95,7 @@ const Hero = () => {
               href={personalInfo.resume}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-red-500 transition-colors"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
               aria-label="Resume"
             >
               <FileText size={24} />
@@ -106,8 +106,8 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-red-500 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-red-500 rounded-full"></div>
+        <div className="w-6 h-10 border-2 border-yellow-400 rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-2 bg-yellow-500 rounded-full"></div>
         </div>
       </div>
     </section>

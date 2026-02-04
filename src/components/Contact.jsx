@@ -17,9 +17,9 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get In <span className="text-red-500">Touch</span>
+            Get In <span className="bg-gradient-to-r from-yellow-400 to-red-400 bg-clip-text text-transparent">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+          <div className="w-40 h-0.5 bg-red-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out!
           </p>
@@ -32,10 +32,10 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
               <div className="space-y-4">
                 {/* Email */}
-                <Card className="bg-zinc-900 border-zinc-800 hover:border-red-900/50 transition-colors">
+                <Card className="bg-zinc-900 border-zinc-800 hover:border-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/10 transition-all">
                   <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="text-red-500" size={24} />
+                    <div className="w-12 h-12 bg-red-400/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="text-yellow-400" size={24} />
                     </div>
                     <div>
                       <h4 className="text-white font-semibold mb-1">Email</h4>
@@ -50,10 +50,10 @@ const Contact = () => {
                 </Card>
 
                 {/* Location */}
-                <Card className="bg-zinc-900 border-zinc-800 hover:border-red-900/50 transition-colors">
+                <Card className="bg-zinc-900 border-zinc-800 hover:border-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/10 transition-all">
                   <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="text-red-500" size={24} />
+                    <div className="w-12 h-12 bg-red-400/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="text-yellow-400" size={24} />
                     </div>
                     <div>
                       <h4 className="text-white font-semibold mb-1">Location</h4>
@@ -63,10 +63,10 @@ const Contact = () => {
                 </Card>
 
                 {/* University */}
-                <Card className="bg-zinc-900 border-zinc-800 hover:border-red-900/50 transition-colors">
+                <Card className="bg-zinc-900 border-zinc-800 hover:border-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/10 transition-all">
                   <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Send className="text-red-500" size={24} />
+                    <div className="w-12 h-12 bg-red-400/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Send className="text-yellow-400" size={24} />
                     </div>
                     <div>
                       <h4 className="text-white font-semibold mb-1">University</h4>
@@ -89,7 +89,7 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-lg flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-all group"
+                      className="w-12 h-12 bg-black-900 border border-white-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-red-500 hover:to-yellow-300 hover:border-white-400"
                       aria-label={social.name}
                     >
                       <Icon className="text-gray-400 group-hover:text-white transition-colors" size={20} />
@@ -107,13 +107,13 @@ const Contact = () => {
                 <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
                 <div className="space-y-6">
                   <p className="text-gray-400">
-                    I'm currently looking for opportunities in software development, Android development, and cybersecurity. If you'd like to work together or just want to chat, feel free to drop me an email!
+                    I'm currently looking for opportunities in Software development, Android development, and Cybersecurity. If you'd like to work together or just want to chat, feel free to drop me an email!
                   </p>
                   <div className="bg-zinc-800/50 border border-zinc-700 rounded-lg p-6">
                     <p className="text-sm text-gray-500 mb-2">Quick Email:</p>
                     <a
                       href={`mailto:${personalInfo.email}`}
-                      className="text-red-500 hover:text-red-400 font-semibold text-lg transition-colors"
+                      className="text-red-300 hover:text-red-400 font-semibold text-lg transition-colors"
                     >
                       {personalInfo.email}
                     </a>
@@ -121,7 +121,7 @@ const Contact = () => {
                   <div className="pt-4">
                     <a
                       href={`mailto:${personalInfo.email}?subject=Let's Work Together`}
-                      className="inline-flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-lg transition-colors"
+                      className="inline-flex items-center justify-center w-full bg-gradient-to-r from-red-600 to-yellow-400 hover:from-yellow-400 hover:to-red-400 text-black font-bold py-4 rounded-lg transition-colors"
                     >
                       <Mail className="mr-2" size={20} />
                       Compose Email

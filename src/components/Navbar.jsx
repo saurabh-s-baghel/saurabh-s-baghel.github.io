@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-sm border-b border-red-900/20' : 'bg-transparent'
+      isScrolled ? 'bg-[#0B0B0E]/80 backdrop-blur-xl border-b border-yellow-400/20 shadow-lg shadow-black/50': 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -40,9 +40,9 @@ const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('home')}
-            className="text-xl font-bold text-white hover:text-red-500 transition-colors"
+            className="text-xl font-extrabold tracking-wide text-gray-100 hover:text-yellow-400 transition-colors"
           >
-            Portfolio
+            SSB
           </button>
 
           {/* Desktop Navigation */}
@@ -51,14 +51,14 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-gray-300 hover:text-red-500 transition-colors font-medium"
+                className="relative text-gray-300 font-medium transition-colors hover:text-yellow-400 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all hover:after:w-full"
               >
                 {link.name}
               </button>
             ))}
-            <Button
+            <Button   // Call-to-Action Button
               onClick={() => scrollToSection('contact')}
-              className="bg-red-600 hover:bg-red-700 text-white"
+              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 shadow-lg shadow-red-600/30"
             >
               Get in Touch
             </Button>
