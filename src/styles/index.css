@@ -112,5 +112,35 @@ code {
         border-top-color: inherit;
         border-bottom-color: inherit;
     }
-}
 
+    /* ===== Custom Scrollbar ===== */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #000;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+        180deg,
+        #dc2626, /* red */
+        #f59e0b  /* amber */
+        );
+        border-radius: 999px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(
+        180deg,
+        #ef4444,
+        #fbbf24
+        );
+    }
+    
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #dc2626 #000;
+    }
+}
