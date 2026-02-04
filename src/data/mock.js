@@ -1,119 +1,110 @@
 // Mock data for portfolio
 
 export const personalInfo = {
-    name: "Your Name",
-    role: "Computer Science Student",
-    university: "University of Alberta",
-    tagline: "Software Developer | Android Enthusiast | Cybersecurity & RL Explorer",
-    email: "your.email@ualberta.ca",
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    resume: "#"
-  };
-  
-  export const aboutMe = {
-    description: "I'm a Computer Science student at the University of Alberta with a passion for building innovative software solutions. My interests span across Android development, cybersecurity, and reinforcement learning. I enjoy tackling complex problems and creating applications that make a difference.",
+  name: "Saurabh Singh Baghel",
+  role: "Computer Science Student",
+  university: "University of Alberta",
+  tagline:
+    "Building reliable software systems with a focus on UI architecture, testing, and systems-level thinking.",
+
+  email: "ssb.sr.2864@gmail.com",
+  github: "https://github.com/saurabh-s-baghel",
+  linkedin: "https://www.linkedin.com/in/saurabh-ssb",
+  resume: "/resume.pdf" // we’ll wire this later
+};
+
+export const aboutMe = {
+  description:
+    "Computer Science student at the University of Alberta with hands-on experience in UI engineering, systems programming, and software testing. Interested in building reliable, well-architected software across web, mobile, and low-level systems. Outside of tech, I enjoy climbing, running, traveling, breakdancing, and strength training.",
     interests: [
-      "Software Development",
-      "Android Development",
-      "Cybersecurity",
-      "Reinforcement Learning",
-      "UI/UX Design"
-    ],
-    skills: [
-      { name: "Java", category: "language" },
-      { name: "Kotlin", category: "language" },
-      { name: "Python", category: "language" },
-      { name: "JavaScript", category: "language" },
-      { name: "React", category: "framework" },
-      { name: "Android SDK", category: "framework" },
-      { name: "TensorFlow", category: "framework" },
-      { name: "Git", category: "tool" },
-      { name: "Docker", category: "tool" },
-      { name: "Linux", category: "tool" }
-    ]
-  };
-  
-  export const projects = [
-    {
-      id: 1,
-      title: "SecureChat Android App",
-      description: "End-to-end encrypted messaging application for Android with modern Material Design UI. Implements RSA encryption for secure communication.",
-      technologies: ["Kotlin", "Android", "Firebase", "Encryption"],
-      category: "android",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Network Security Scanner",
-      description: "Python-based network vulnerability scanner that detects common security issues and provides detailed reports with remediation suggestions.",
-      technologies: ["Python", "Scapy", "Security", "Networking"],
-      category: "cybersecurity",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: 3,
-      title: "RL Gaming Agent",
-      description: "Reinforcement learning agent trained to play classic Atari games using Deep Q-Networks. Achieved superhuman performance on multiple games.",
-      technologies: ["Python", "TensorFlow", "OpenAI Gym", "Deep Learning"],
-      category: "machine-learning",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: 4,
-      title: "Task Management Web App",
-      description: "Modern task management application with drag-and-drop functionality, real-time collaboration, and beautiful responsive design.",
-      technologies: ["React", "Node.js", "MongoDB", "Material-UI"],
-      category: "web",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Fitness Tracker Mobile App",
-      description: "Cross-platform fitness tracking app with workout plans, progress monitoring, and social features to keep users motivated.",
-      technologies: ["React Native", "Firebase", "Redux", "Charts"],
-      category: "android",
-      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Password Strength Analyzer",
-      description: "Advanced password strength analyzer with entropy calculation, dictionary attack detection, and secure password generation.",
-      technologies: ["Python", "Flask", "Security", "Cryptography"],
-      category: "cybersecurity",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-      githubUrl: "#",
-      liveUrl: "#"
-    }
-  ];
-  
-  export const socialLinks = [
-    {
-      name: "GitHub",
-      url: "https://github.com/yourusername",
-      icon: "github"
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
-      icon: "linkedin"
-    },
-    {
-      name: "Email",
-      url: "mailto:your.email@ualberta.ca",
-      icon: "mail"
-    }
-  ];
-  
-  
-  
+    "Software Development",
+    "Android Development",
+    "Cybersecurity",
+    "Reinforcement Learning",
+    "UI/UX Design"
+  ],
+  skills: [
+    { name: "Java", category: "language" },
+    { name: "Python", category: "language" },
+    { name: "C", category: "language" },
+    { name: "JavaScript", category: "language" },
+    { name: "HTML/CSS", category: "language" },
+    { name: "RISC-V", category: "language" },
+    { name: "React", category: "framework" },
+    { name: "Android SDK", category: "framework" },
+    { name: "LINUX", category: "tool" },
+    { name: "Git", category: "tool" },
+    { name: "Docker", category: "tool" },
+    { name: "Linux", category: "tool" }
+  ]
+};
+
+export const projects = [
+  {
+    id: 1,
+    title: "Personal Portfolio & UI Framework",
+    description:
+      "Engineered a modular React-based portfolio by reverse-engineering a component architecture and rebuilding it using Shadcn UI and Tailwind CSS. Focused on responsive layout, clean separation of data and presentation, and production deployment via GitHub Pages.",
+    technologies: ["React", "Shadcn UI", "Tailwind CSS", "GitHub Pages"],
+    category: "web",
+    image: "/projects/portfolio.png",
+    githubUrl: "https://github.com/saurabh-s-baghel/saurabh-s-baghel.github.io",
+    liveUrl: "https://saurabh-s-baghel.github.io"
+  },
+
+  {
+    id: 2,
+    title: "SeekDeep (Mobile UI & OOD)",
+    description:
+      "Developed an Android application using strict object-oriented design principles. Built modular UI components in Java/XML, collaborated in a Scrum team, and integrated Firebase-backed authentication and data flows with unit testing.",
+    technologies: ["Java", "Android", "XML", "Firebase", "Agile"],
+    category: "android",
+    image: "/projects/seekdeep.png",
+    githubUrl: "https://github.com/cmput301-w25/project-seekdeep",
+    liveUrl: null
+  },
+
+  {
+    id: 3,
+    title: "DragonShell & File System Simulator",
+    description:
+      "Built a custom Unix shell and virtual file system in C, implementing process management, memory handling, and file consistency logic using POSIX APIs. Focused on correctness, efficiency, and low-level debugging.",
+    technologies: ["C", "POSIX", "Linux", "Valgrind"],
+    category: "systems",
+    image: "/projects/dragonshell.png",
+    githubUrl: null,
+    liveUrl: null,
+    restricted: true
+  },
+
+  {
+    id: 4,
+    title: "Tartan (QA & Testing)",
+    description:
+      "Applied Test-Driven Development practices by designing comprehensive JUnit test suites. Integrated automated testing workflows using GitHub Actions to improve reliability and catch regressions early.",
+    technologies: ["Java", "JUnit", "GitHub Actions", "TDD"],
+    category: "testing",
+    image: "/projects/tartan.png",
+    githubUrl: null,
+    liveUrl: null,
+    restricted: true
+  }
+];
+
+export const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/saurabh-s-baghel",
+    icon: "github"
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/saurabh-ssb",
+    icon: "linkedin"
+  },
+  {
+    name: "Email",
+    url: "mailto:ssb.sr.2864@gmail.com",
+    icon: "mail"
+  }
+];
