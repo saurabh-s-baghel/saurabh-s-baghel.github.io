@@ -115,7 +115,7 @@ code {
 
     /* ===== Custom Scrollbar ===== */
     ::-webkit-scrollbar {
-        width: 6px;
+        width: 3px;
     }
     
     ::-webkit-scrollbar-track {
